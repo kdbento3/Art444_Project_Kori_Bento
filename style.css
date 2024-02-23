@@ -1,0 +1,62 @@
+/* CSS GOES HERE */
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+section {
+    padding: 60px 40px;
+}
+
+section:nth-last-child() {
+    background-color: #AF8D4A;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container_left {
+    width: 100%;
+    max-width: 960px;
+    text-align: left;
+    padding-left: auto;
+    margin-left: auto;
+}
+
+.row_left {
+    width: 50%;
+    max-width: 260px;
+    text-align: left;
+    margin-right: auto;
+}
+
+.row_right {
+    width: 50%;
+    max-width: 400px;
+    text-align: left;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #AF8D4A;
+    flex-flow: row;
+    padding-left: auto;
+    justify-content: left;
+    gap: 10px;
+}
+
+footer {
+    background-color: #000;
+    color: #bf2020;
+    padding: 10px;
+}
