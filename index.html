@@ -2,8 +2,11 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Title Goes Here</title>
+  <title>Kori Bento Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,11 +26,30 @@
   </div>
 </header>
 
+
+
+<div onclick="myMenu()" class="mobile_menu" id="menubutton"> </div>
+
+<!-- Main Header Mobil Popout-->
+<div id="mymenu" class="mobile_menu_popout">
+  <ul>
+    <li><a class="smoothscroll" href="#about">About</a></li>
+    <li><a class="smoothscroll" href="#skills">Skills</a></li>
+    <li><a class="smoothscroll" href="#gallery">Gallery</a></li>
+    <li><a class="smoothscroll" href="#faqs">FAQs</a></li>
+    <li><a class="smoothscroll" href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+
+
+
+
 <!-- Main Header --> 
-  <section id="header" class="header">
+  <section id="header">
     <div class="container">
     <div class="row_left">
-      <img src="images/Logo.jpeg" class="image" alt="Work One"/>
+      <img src="images/Asset 1.svg" class="image" width="100px" height="100px" alt="Work One"/>
       <h1>Hello, I'm Kori Bento. I am a young designer exploring my passions.</h1>
     </div>
   </div>
@@ -45,34 +67,51 @@
 </section>
 
 <!-- Skills Section -->  
+<h2>SKILLS</h2>
 <section id="skills">
-  <div class="container_left">
-    <h2>Skills</h2>
-    <ul>
-      <li>Indesign</li>
-      <li>AdobeXD</li>
-      <li>Illustrator</li>
-      <li>Photoshop</li>
-    </ul>
-    <ul>
-      <li>Lightroom</li>
-      <li>Figma</li>
-      <li>Photography</li>
-      <li>HTML</li>
-    </ul>
-    <ul>
-      <li>Microsoft Word</li>
-      <li>Excel</li>
-      <li>UNIX Systems</li>
-      <li>Java</li>
-    </ul>
+  <div class="container_skills">
+    <div class="skill_list">
+
+          <div>
+            <ul>
+              <li>Indesign</li>
+              <li>AdobeXD</li>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+ 
+      <div>
+        <ul>
+          <li>Lightroom</li>
+          <li>Figma</li>
+          <li>Photography</li>
+          <li>HTML</li>
+        </ul>
+      </div>
+  
+      <div>
+        <ul>
+        <li>Microsoft Word</li>
+        <li>Excel</li>
+        <li>UNIX Systems</li>
+        <li>Java</li>
+      </ul>
+     </div>
+
+
+</ul>
   </div>
+
+  <div class="overlap">
+  <h3>GALLERY</h3>
+  </div>
+
 </section>
 
 <!-- Gallery Section -->  
 <section id="gallery">
-  <div class="container">
-    <h2>Gallery</h2>
+  <div class="container_gallery">
       <div><img src="images/Duck Pond Daniel Porter : Bento_342spr23_mockup Medium.jpeg" class="image" alt="Work One"/></div>
       <div><img src="images/4 Fold Brochure Mockup Medium.jpeg" class="image" alt="Work Two"/></div>
       <div><img src="images/added color light.jpg" class="image" alt="Work Three"/></div>
@@ -86,36 +125,44 @@
 
 <!-- Testimonials Section -->  
 <section id="faqs">
-  <div class="container">
-    <h2>Frequent Asked Questions</h2>
-      <h3>When will you be graduating from SDSU?</h3>
+  <h1>Frequent Asked Questions</h1>
+  <div class="container_faqs">
+    <div>
+      <h4>When will you be graduating from SDSU?</h4>
       <p>I graduate in May 2024 with a Professional Studies and Fine Arts degree with an emphasis in Multimedia paired with a minor in Computer Science. </p>
-      <h3>What do you have planned for after graduation?</h3>
+    </div>
+    <div>
+      <h4>What do you have planned for after graduation?</h4>
       <p>I have no solid plans for after graduation besides going on a big vacation to celebrate finishing college!</p>
-      <h3>What was your favorite class you took at SDSU?</h3>
+    </div>
+    <div>
+      <h4>What was your favorite class you took at SDSU?</h4>
       <p>My favorite class was Calculus II, it offered a fun challenge as we solved complex math problems that required us to visual non existent objects in space. </p>
-      <h3>What are your strengths?</h3>
+    </div>
+    <div>
+      <h4>What are your strengths?</h4>
       <p>My unique background as a previous computer science major gives me a unique analytic approach when it comes to design. This paired with my discipline learned through being a division one collegiate athlete allows me to work with others to create the dream product. </p>
-  </div>
+    </div>
+    <h5>CONTACT</h5>
+    </div>
 </section>
 
 <!-- Contact Section -->  
 <section id="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
+  <div class="containerContact">
     <form>
       <div class="six columns">
         <label for="exampleRecipientInput">Name</label>
-        <input class="u-full-width" type="text">
+        <input class="u-full-width" type="text" style="width: 90%;">
       </div>
       <div class="six columns">
         <label for="exampleEmailInput">Email</label>
-        <input class="u-full-width" type="email">
+        <input class="u-full-width" type="email" style="width: 90%;">
       </div>
     
       <div>
         <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width"></textarea>
+        <textarea class="u-full-width" style="width: 90%;"></textarea>
       </div>
       <input class="button-primary" type="submit" value="Submit">
     </form>
@@ -125,11 +172,18 @@
 <!-- Footer Section -->  
 
 <footer>
-  <div class="container">
-    <img src="images/Logo.jpeg" class="image" alt="Work One"/>
+  <div class="footer">
+    <img src="images/Asset 4.svg" class="image" width="100px" height="100px" alt="Work One"/>
       <p>Copywrite © 2024, All Rights Reserved</p>
   </div>
 </footer>
+
+<script>
+  function myMenu(){
+    document.getElementById('mymenu').classList.toggle('open');
+    document.getElementById('menubutton').classList.toggle('close');
+}
+</script>
 
 <script src="script.js"></script>
 </body>

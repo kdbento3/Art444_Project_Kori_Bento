@@ -4,12 +4,150 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
+    background-color: #EFECE6;
+
 }
+
+ul{
+    margin: 0;
+    font-weight: 400;
+}
+
+
+#contact{
+    background-color: #AF8D4A;
+}
+
+.main_nav{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0cm;
+}
+
+.mobile_menu{
+    width:40px;
+    height: 40px;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    background-color: #EFECE6;
+    background-image: url(images/134216_menu_lines_hamburger_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 999;
+    display: none;
+}
+
+.mobile_menu_popout{
+    position:fixed;
+    height: 100%;
+    left: -180px;
+    padding-top: 100px;
+    background-color: #AF8D4A;
+    z-index: 998;
+    padding-right: 30px;
+    transition:all 300ms;
+    display:none;
+}
+
+.open{
+    left: 0;
+}
+
+.close{
+    background-image: url(images/8666595_x_icon.svg);
+}
+
+.overlap{
+    background-color: #CABDD3;
+    text-align: right;
+}
+
+
+ul {
+    list-style: none;
+}
+
+#gallery {
+    background-color: #AF8D4A;
+}
+
+.skill_list {
+    background-color: #CABDD3;
+    display: flex;
+    flex-flow: row;
+    height: 150px;
+    gap: 20px;
+    padding-top: 50px;
+    justify-content: center;
+    color: #1D0133;
+    
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    color: #AF8D4A;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    color: #AF8D4A;
+    background-color: #CABDD3;
+    padding-right: 150px;
+    margin: 0;
+    margin-bottom: -10px;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    padding-left: 150px;
+    margin-bottom: -10px;
+    color: #CABDD3;
+}
+
+h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: -10px;
+    padding-right: 150px;
+    color: #AF8D4A;
+    
+
+}
+
+
+h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 10%;
+    margin-bottom: -2%;
+    color: #CABDD3;
+}
+
+
+p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1D0133;
+}
+
 section {
     padding: 60px 40px;
+
 }
 
 section:nth-last-child() {
@@ -18,9 +156,40 @@ section:nth-last-child() {
 
 .container {
     width: 100%;
+    padding: 0%;
+}
+
+.containerContact {
+    width: 100%;
+    padding: 0%;
+    align-content: end;
+}
+
+.container_skills {
+    width: 100%;
+    padding: 0%;
+}
+
+#skills {
+    padding: 0%;
+}
+
+#faqs {
+    padding-bottom: 0;
+}
+
+.container_gallery {
+    width: 100%;
+    align-content: normal;
+}
+
+
+.container_faqs {
+    width: 100%;
     max-width: 960px;
     text-align: center;
     margin: 0 auto;
+    font-size: 20;
 }
 
 .container_left {
@@ -29,7 +198,26 @@ section:nth-last-child() {
     text-align: left;
     padding-left: auto;
     margin-left: auto;
+
 }
+
+#about{
+    background-image: url("images/IMG_4183-5.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position-x: -180px;
+    background-position-y: 200px;
+}
+
+#header {
+    display:inherit;
+    background-image: url("images/TopRight.png");
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: -200px;
+}
+
 
 .row_left {
     width: 50%;
@@ -37,6 +225,7 @@ section:nth-last-child() {
     text-align: left;
     margin-right: auto;
 }
+
 
 .row_right {
     width: 50%;
@@ -55,8 +244,87 @@ nav ul {
     gap: 10px;
 }
 
+
 footer {
-    background-color: #000;
+    background-color: #EFECE6;
     color: #bf2020;
     padding: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .main_nav{
+        display: none;
+    }
+
+    .mobile_menu{
+        display:block;
+    }
+
+    .mobile_menu_popout{
+        display:block;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .container{
+        padding-top: 30px;
+    }
+
+    #about{
+        background-image: none;
+        background-color: #EFECE6;
+    } 
+
+    #header{
+        padding-bottom: 450px;
+        background-size: 500px;
+        background-position-y: 250px;
+        background-position-x: 30px;
+
+    }
+
+}
+@media only screen and (max-width: 390px) {
+    #header{
+        background-image: none;
+        padding-bottom: 0%;
+
+    }
+
+    .row_right {
+        width: 100%;
+        text-align: left;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+   
+
+    p{
+        font-size: 12px;
+    }
+
+    .skill_list {
+        background-color: #CABDD3;
+        display: block;
+        padding-top: 25px;
+        padding-bottom: 100px;
+        justify-content: center;
+        color: #1D0133;
+        
+    }
+
+
 }
