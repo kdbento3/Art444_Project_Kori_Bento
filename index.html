@@ -30,17 +30,18 @@
 
 <div onclick="myMenu()" class="mobile_menu" id="menubutton"> </div>
 
+
+
 <!-- Main Header Mobil Popout-->
 <div id="mymenu" class="mobile_menu_popout">
   <ul>
-    <li><a class="smoothscroll" href="#about">About</a></li>
-    <li><a class="smoothscroll" href="#skills">Skills</a></li>
-    <li><a class="smoothscroll" href="#gallery">Gallery</a></li>
-    <li><a class="smoothscroll" href="#faqs">FAQs</a></li>
-    <li><a class="smoothscroll" href="#contact">Contact</a></li>
+    <li><a onclick="hide()" class="smoothscroll" href="#about">About</a></li>
+    <li><a onclick="hide()" class="smoothscroll" href="#skills">Skills</a></li>
+    <li><a onclick="hide()" class="smoothscroll" href="#gallery">Gallery</a></li>
+    <li><a onclick="hide()" class="smoothscroll" href="#faqs">FAQs</a></li>
+    <li><a onclick="hide()" class="smoothscroll" href="#contact">Contact</a></li>
   </ul>
 </div>
-
 
 
 
@@ -182,6 +183,13 @@
   function myMenu(){
     document.getElementById('mymenu').classList.toggle('open');
     document.getElementById('menubutton').classList.toggle('close');
+  }
+</script>
+
+<script>
+  function hide() {
+    document.getElementById('menubutton').classList.remove('close');
+    document.getElementById('mymenu').classList.remove('open');
 }
 </script>
 

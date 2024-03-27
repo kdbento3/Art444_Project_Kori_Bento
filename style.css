@@ -8,6 +8,7 @@ body {
     font-size: 100%;
     vertical-align: baseline;
     background-color: #EFECE6;
+    scroll-behavior: smooth;
 
 }
 
@@ -15,6 +16,28 @@ ul{
     margin: 0;
     font-weight: 400;
 }
+
+a {
+    outline-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:link {
+    color:#1D0133;
+  }
+  
+  a:visited {
+    color:#1D0133;
+  }
+ 
+  a:active {
+    background: #CABDD3;
+    color: #1D0133;
+  }
+
+  a:hover {
+    background: #CABDD3;
+  }
 
 
 #contact{
@@ -61,6 +84,7 @@ ul{
 .close{
     background-image: url(images/8666595_x_icon.svg);
 }
+
 
 .overlap{
     background-color: #CABDD3;
