@@ -32,6 +32,9 @@
 
 
 
+  <div onclick="dark_mode()" class="cardDark" id="body"> </div>
+
+
 <!-- Main Header Mobil Popout-->
 <div id="mymenu" class="mobile_menu_popout">
   <ul>
@@ -50,8 +53,9 @@
   <section id="header">
     <div class="container">
     <div class="row_left">
-      <img src="images/Asset 1.svg" class="image" width="100px" height="100px" alt="Work One"/>
-      <h1>Hello, I'm Kori Bento. I am a young designer exploring my passions.</h1>
+      <img src="images/Asset 1.svg" class="light_logo" width="100px" height="100px" alt="Work One"/>
+      <img src="images/Asset 4.svg" class="dark_logo" width="100px" height="100px" alt="Work One"/>
+      <h1 class="header_text">Hello, I'm Kori Bento. I am a young designer exploring my passions.</h1>
     </div>
   </div>
   </section>
@@ -60,7 +64,7 @@
 <section id="about">
   <div class="container">
     <div class="row_right">
-      <h1>About</h1>
+      <h1 class="header_text">About</h1>
       <p>Hi! I'm Kori. I am currently pursuing my BA in multimedia from San Diego State University paired with a minor in Computer Science. I have always been doodling or creating since I was a child, but I also have a fascination with math and emerging technologies. These combined is what led me to graphic design with UX and UI. </p>
       <p>Outside of my studies I am obsessed with magazines (I take a lot of pride in my always growing magazine collection), fashion, cooking, curating cool outfits, painting, road trips, and the ocean. I love projecting different aesthetics through my outfits, my room design, and my art.</p>
       </div>
@@ -113,14 +117,14 @@
 <!-- Gallery Section -->  
 <section id="gallery">
   <div class="container_gallery">
-      <div><img src="images/Duck Pond Daniel Porter : Bento_342spr23_mockup Medium.jpeg" class="image" alt="Work One"/></div>
-      <div><img src="images/4 Fold Brochure Mockup Medium.jpeg" class="image" alt="Work Two"/></div>
-      <div><img src="images/added color light.jpg" class="image" alt="Work Three"/></div>
-      <div><img src="images/AdobeStock_566731518 Medium.jpeg" class="image" alt="Work Four"/></div>
-      <div><img src="images/App_Portfolio_Mockup Large Medium.jpeg" class="image" alt="Work Five"/></div>
-      <div><img src="images/Frame 1 Medium.jpeg" class="image" alt="Work Six"/></div>
-      <div><img src="images/KBento_pg_mockup1,etc.jpeg_342 spr23  Medium.jpeg" class="image" alt="Work Seven"/></div>
-      <div><img src="images/Screenshot 2024-02-23 at 7.14.02 PM Medium.jpeg" class="image" alt="Work Eight"/></div>
+      <div ><img src="images/Duck Pond Daniel Porter : Bento_342spr23_mockup Medium.jpeg" class="imageG" alt="Work One"/></div>
+      <div ><img src="images/4 Fold Brochure Mockup Medium.jpeg" class="imageG" alt="Work Two"/></div>
+      <div ><img src="images/added color light.jpg" class="imageG" alt="Work Three"/></div>
+      <div ><img src="images/AdobeStock_566731518 Medium.jpeg" class="imageG" alt="Work Four"/></div>
+      <div ><img src="images/App_Portfolio_Mockup Large Medium.jpeg" class="imageG" alt="Work Five"/></div>
+      <div ><img src="images/Frame 1 Medium.jpeg" class="imageG" alt="Work Six"/></div>
+      <div ><img src="images/KBento_pg_mockup1,etc.jpeg_342 spr23  Medium.jpeg" class="imageG" alt="Work Seven"/></div>
+      <div ><img src="images/Screenshot 2024-02-23 at 7.14.02 PM Medium.jpeg" class="imageG" alt="Work Eight"/></div>
   </div>
 </section>
 
@@ -154,16 +158,16 @@
     <form>
       <div class="six columns">
         <label for="exampleRecipientInput">Name</label>
-        <input class="u-full-width" type="text" style="width: 90%;">
+        <input class="u-full-width" type="text" style="width: 200px;">
       </div>
       <div class="six columns">
         <label for="exampleEmailInput">Email</label>
-        <input class="u-full-width" type="email" style="width: 90%;">
+        <input class="u-full-width" type="email" style="width: 200px;">
       </div>
     
       <div>
         <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width" style="width: 90%;"></textarea>
+        <input class="u-full-width" style="width: 200px"></input>
       </div>
       <input class="button-primary" type="submit" value="Submit">
     </form>
@@ -184,9 +188,19 @@
     document.getElementById('mymenu').classList.toggle('open');
     document.getElementById('menubutton').classList.toggle('close');
   }
-</script>
 
-<script>
+
+
+  function dark_mode() {
+  var element = document.body;
+  element.classList.toggle("dark_mode");
+  const cardDark = document.querySelectorAll('card');
+
+  for (let i = 0; i < cardDark.length; i++) {
+      cardDark(i).classList.toggle('card_dark')
+   }
+}
+
   function hide() {
     document.getElementById('menubutton').classList.remove('close');
     document.getElementById('mymenu').classList.remove('open');
