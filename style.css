@@ -263,11 +263,6 @@ section:nth-last-child() {
 }
 
 
-.dark_mode .container {
-    background-color: #1D0133;
-    color: #1D0133;
-}
-
 .container {
     width: 100%;
     padding: 0%;
