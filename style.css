@@ -7,7 +7,6 @@ html {
 .dark_mode{
     background-color: #1D0133;
     text-decoration-color: #CABDD3;
-
 }
 
 body {
@@ -86,6 +85,16 @@ a {
     display: none;
 }
 
+
+.faq_Toggle {
+    height: 50px;
+    overflow: hidden;
+}
+
+.faqOpen {
+    height: auto;
+}
+
 .light_logo {
     display: block;
 }
@@ -108,7 +117,12 @@ a {
     position: fixed;
     top: 40px;
     right: 40px;
-    background-color: #CABDD3;
+    background-image:url(images/7148715_dark_mode_night_moon_icon.svg);
+}
+
+
+.dark_mode .cardDark{
+    background-image: url(images/9104141_sun_bright_brightness_light\ mode_icon.svg);
 }
 
 .mobile_menu_popout{
@@ -228,6 +242,15 @@ h5 {
 }
 
 h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 10%;
+    margin-bottom: -2%;
+    color: #CABDD3;
+}
+
+h6 {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;

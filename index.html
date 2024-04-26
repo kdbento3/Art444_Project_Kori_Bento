@@ -31,7 +31,6 @@
 <div onclick="myMenu()" class="mobile_menu" id="menubutton"> </div>
 
 
-
   <div onclick="dark_mode()" class="cardDark" id="body"> </div>
 
 
@@ -129,25 +128,28 @@
 </section>
 
 <!-- Testimonials Section -->  
+
+
 <section id="faqs">
   <h1>Frequent Asked Questions</h1>
+  <p>Click the following questions for more information</p>
   <div class="container_faqs">
-    <div>
-      <h4>When will you be graduating from SDSU?</h4>
+    <div class="faq_Toggle">
+      <h4>+ When will you be graduating from SDSU?</h4>
       <p>I graduate in May 2024 with a Professional Studies and Fine Arts degree with an emphasis in Multimedia paired with a minor in Computer Science. </p>
     </div>
-    <div>
-      <h4>What do you have planned for after graduation?</h4>
+    <div class="faq_Toggle">
+      <h4>+ What do you have planned for after graduation?</h4>
       <p>I have no solid plans for after graduation besides going on a big vacation to celebrate finishing college!</p>
-    </div>
-    <div>
-      <h4>What was your favorite class you took at SDSU?</h4>
+  </div>
+    <div class="faq_Toggle">
+      <h4>+ What was your favorite class you took at SDSU?</h4>
       <p>My favorite class was Calculus II, it offered a fun challenge as we solved complex math problems that required us to visual non existent objects in space. </p>
     </div>
-    <div>
-      <h4>What are your strengths?</h4>
+    <div class="faq_Toggle">
+      <h4>+ What are your strengths?</h4>
       <p>My unique background as a previous computer science major gives me a unique analytic approach when it comes to design. This paired with my discipline learned through being a division one collegiate athlete allows me to work with others to create the dream product. </p>
-    </div>
+  </div>
     <h5>CONTACT</h5>
     </div>
 </section>
@@ -191,13 +193,19 @@
 
 
 
+    const faqToggle = document.querySelectorAll('.faq_Toggle');
+    for (let i = 0; i < faqToggle.length; i++) {
+      faqToggle[i].addEventListener('click', function() { this.classList.toggle("faqOpen");} )
+    }
+  
+
   function dark_mode() {
   var element = document.body;
   element.classList.toggle("dark_mode");
   const cardDark = document.querySelectorAll('card');
 
   for (let i = 0; i < cardDark.length; i++) {
-      cardDark(i).classList.toggle('card_dark')
+      cardD(i).classList.toggle('card_dark')
    }
 }
 
