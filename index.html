@@ -18,7 +18,7 @@
       <ul>
         <li><a class="smoothscroll" href="#about">About</a></li>
         <li><a class="smoothscroll" href="#skills">Skills</a></li>
-        <li><a class="smoothscroll" href="#gallery">Gallery</a></li>
+        <li><a class="smoothscroll" href="#galleryjump">Gallery</a></li>
         <li><a class="smoothscroll" href="#faqs">FAQs</a></li>
         <li><a class="smoothscroll" href="#contact">Contact</a></li>
       </ul>
@@ -36,13 +36,13 @@
 
 <!-- Main Header Mobil Popout-->
 <div id="mymenu" class="mobile_menu_popout">
-  <ul>
+  <ul2>
     <li><a onclick="hide()" class="smoothscroll" href="#about">About</a></li>
     <li><a onclick="hide()" class="smoothscroll" href="#skills">Skills</a></li>
     <li><a onclick="hide()" class="smoothscroll" href="#gallery">Gallery</a></li>
     <li><a onclick="hide()" class="smoothscroll" href="#faqs">FAQs</a></li>
     <li><a onclick="hide()" class="smoothscroll" href="#contact">Contact</a></li>
-  </ul>
+  </ul2>
 </div>
 
 
@@ -71,8 +71,8 @@
 </section>
 
 <!-- Skills Section -->  
-<h2>SKILLS</h2>
 <section id="skills">
+<h2>SKILLS</h2>
   <div class="container_skills">
     <div class="skill_list">
 
@@ -103,35 +103,37 @@
       </ul>
      </div>
 
+</div>
 
-</ul>
-  </div>
-
-  <div class="overlap">
-  <h3>GALLERY</h3>
-  </div>
-
+<section id="galleryjump"></section>
+</div>
 </section>
+<h3>GALLERY</h3>
+
 
 <!-- Gallery Section -->  
 <section id="gallery">
   <div class="container_gallery">
-      <div ><img src="images/Duck Pond Daniel Porter : Bento_342spr23_mockup Medium.jpeg" class="imageG" alt="Work One"/></div>
-      <div ><img src="images/4 Fold Brochure Mockup Medium.jpeg" class="imageG" alt="Work Two"/></div>
-      <div ><img src="images/added color light.jpg" class="imageG" alt="Work Three"/></div>
-      <div ><img src="images/AdobeStock_566731518 Medium.jpeg" class="imageG" alt="Work Four"/></div>
-      <div ><img src="images/App_Portfolio_Mockup Large Medium.jpeg" class="imageG" alt="Work Five"/></div>
-      <div ><img src="images/Frame 1 Medium.jpeg" class="imageG" alt="Work Six"/></div>
-      <div ><img src="images/KBento_pg_mockup1,etc.jpeg_342 spr23  Medium.jpeg" class="imageG" alt="Work Seven"/></div>
-      <div ><img src="images/Screenshot 2024-02-23 at 7.14.02 PM Medium.jpeg" class="imageG" alt="Work Eight"/></div>
+      <div class="gallery-item"><img src="images/Duck Pond Daniel Porter : Bento_342spr23_mockup Medium.jpeg" class="imageG" alt="Work One" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/4 Fold Brochure Mockup Medium.jpeg" class="imageG" alt="Work Two" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/added color light.jpg" class="imageG" alt="Work Three" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/AdobeStock_566731518 Medium.jpeg" class="imageG" alt="Work Four" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/App_Portfolio_Mockup Large Medium.jpeg" class="imageG" alt="Work Five" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/Frame 1 Medium.jpeg" class="imageG" alt="Work Six" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/KBento_pg_mockup1,etc.jpeg_342 spr23  Medium.jpeg" class="imageG" alt="Work Seven" onclick="enlargeImage(this)"/></div>
+      <div class="gallery-item"><img src="images/Screenshot 2024-02-23 at 7.14.02 PM Medium.jpeg" class="imageG" alt="Work Eight" onclick="enlargeImage(this)"/></div>
   </div>
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" class="modal-content">
+  </div>
+  <hf>FREQUENTLY ASKED QUESTIONS</hf>
 </section>
 
 <!-- Testimonials Section -->  
 
 
 <section id="faqs">
-  <h1>Frequent Asked Questions</h1>
   <p>Click the following questions for more information</p>
   <div class="container_faqs">
     <div class="faq_Toggle">
@@ -150,29 +152,31 @@
       <h4>+ What are your strengths?</h4>
       <p>My unique background as a previous computer science major gives me a unique analytic approach when it comes to design. This paired with my discipline learned through being a division one collegiate athlete allows me to work with others to create the dream product. </p>
   </div>
-    <h5>CONTACT</h5>
     </div>
+    <h5>CONTACT</h5>
 </section>
 
 <!-- Contact Section -->  
 <section id="contact">
   <div class="containerContact">
     <form>
+      <div class="row">
       <div class="six columns">
         <label for="exampleRecipientInput">Name</label>
-        <input class="u-full-width" type="text" style="width: 200px;">
+        <input class="u-full-width" type="text">
       </div>
       <div class="six columns">
         <label for="exampleEmailInput">Email</label>
-        <input class="u-full-width" type="email" style="width: 200px;">
+        <input class="u-full-width" type="email">
       </div>
-    
-      <div>
+      <div class="six columns">
         <label for="exampleMessage">Message</label>
-        <input class="u-full-width" style="width: 200px"></input>
+        <textarea class="u-full-width"></textarea>
       </div>
+    <div class="six columns">
       <input class="button-primary" type="submit" value="Submit">
     </form>
+  </div>
   </div>
 </section>
 
@@ -192,6 +196,18 @@
   }
 
 
+  function enlargeImage(img) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
 
     const faqToggle = document.querySelectorAll('.faq_Toggle');
     for (let i = 0; i < faqToggle.length; i++) {
